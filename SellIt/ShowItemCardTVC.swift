@@ -47,5 +47,12 @@ class ShowItemCardTVC: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowMap"{
+            let controller = segue.destination as! GoogleMapsViewController
+//            controller.location = self.showItem.location
+        }
+    }
 
 }
